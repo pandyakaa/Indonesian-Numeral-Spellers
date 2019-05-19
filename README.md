@@ -19,11 +19,23 @@ Buatlah dalam bahasa pemrograman **_Go_**, sebuah web service berupa **_REST API
 5. Batasan kasus uji : 2000000000 (dua milyar)
 
 ## Cara Penggunaan
-1. Lakukan command run pada file go
+1. Masuk ke direktori **backend**, kemudian ketik perintah :
+
 ```
 go run spell.go read.go main.go
 ```
-2. Uji coba API dengan menggunakan perangkat lunak [POSTMAN](https://www.getpostman.com/)
+
+2. Untuk menguji coba API, menggunakan perangkat lunak [POSTMAN](https://www.getpostman.com/) dengan melakukan request pada :
+```
+http://localhost:8080/
+```
+
+3. Jika ingin menggunakan UI, masuk ke direktori **app**, kemudian ketik perintah :
+
+```
+npm install
+npm start
+```
 
 ## Contoh Kasus Uji
 ### Contoh Kasus Uji 1 : Pengejaan
