@@ -74,6 +74,34 @@ POST '/read'
 Response :
 ![2](https://user-images.githubusercontent.com/38171936/57979915-0f0c1a80-7a4e-11e9-9899-038a87f43709.JPG)
 
+### Contoh Kasus Uji 3 : Pengejaan dan Pembacaan Angka Negatif
+Request :
+```
+GET '/spell?number=-3'
+```
+```JSON
+POST '/read'
+{
+    "text" : "negatif dua ribu"
+}
+```
+Response :
+![Capture](https://user-images.githubusercontent.com/38171936/57989049-acebfd80-7abf-11e9-9aeb-cc448c577dee.JPG)
+
+### Contoh Kasus Uji 4 : Pengejaan dan Pembacaan dengan Masukan Tidak Valid
+Request :
+```
+GET '/spell?number=3-'
+```
+```JSON
+POST '/read'
+{
+    "text" : "dua ribu puluh"
+}
+```
+Response :
+![2](https://user-images.githubusercontent.com/38171936/57989062-e45aaa00-7abf-11e9-84d7-b9712f44c1ba.JPG)
+
 ## Referensi Pengerjaan
 1. https://medium.freecodecamp.org/portfolio-app-using-react-618814e35843
 2. https://hakaselogs.me/2018-04-20/building-a-web-app-with-go-gin-and-react/
