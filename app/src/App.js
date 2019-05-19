@@ -52,7 +52,7 @@ class speller extends React.Component {
         </div>
 
         <div className="App-footer">
-          <h4>Demi seleksi IRK 2019</h4>
+          <h4>13517003</h4>
         </div>
       </div>
 

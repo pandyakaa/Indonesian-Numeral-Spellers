@@ -12,15 +12,20 @@ func read(c *gin.Context) {
 	var query = c.Query("text")
 	if isValidText(query) {
 		var answer = readUtils(query)
-		c.JSON(200, gin.H{
-			"number": answer,
-		})
+		if answer <= 2000000000 {
+			c.JSON(200, gin.H{
+				"number": answer,
+			})
+		} else {
+			c.JSON(200, gin.H{
+				"number": "error",
+			})
+		}
 	} else {
 		c.JSON(200, gin.H{
 			"number": "error",
 		})
 	}
-
 }
 
 func spell(c *gin.Context) {
