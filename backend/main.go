@@ -32,7 +32,12 @@ func spell(c *gin.Context) {
 	c.Header("Content-Type", "application/json")
 	var query = c.Query("number")
 	var num, err = strconv.Atoi(query)
-	var result = spellUtils(num)
+	var result = ""
+	if num > 0 {
+		result = spellUtils(num)
+	} else {
+		result = "negatif " + spellUtils(num*-1)
+	}
 	if err != nil {
 		c.JSON(200, gin.H{
 			"text": "error",

@@ -57,6 +57,9 @@ func toIntUnit(str string) int {
 func readUtils(str string) int {
 	var s = strings.Split(str, " ")
 	var i = 0
+	if s[0] == "negatif" {
+		i = 1
+	}
 	var sum = 0
 	var bound = len(s)
 
@@ -85,6 +88,9 @@ func readUtils(str string) int {
 		}
 		sum = sum + temp2
 		i = i + 1
+	}
+	if s[0] == "negatif" {
+		return sum * -1
 	}
 	return sum
 }
