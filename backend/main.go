@@ -10,10 +10,17 @@ import (
 func read(c *gin.Context) {
 	c.Header("Content-Type", "application/json")
 	var query = c.Query("text")
-	var answer = readUtils(query)
-	c.JSON(200, gin.H{
-		"number": answer,
-	})
+	if isValidText(query) {
+		var answer = readUtils(query)
+		c.JSON(200, gin.H{
+			"number": answer,
+		})
+	} else {
+		c.JSON(200, gin.H{
+			"number": "error",
+		})
+	}
+
 }
 
 func spell(c *gin.Context) {
@@ -26,9 +33,15 @@ func spell(c *gin.Context) {
 			"text": "error",
 		})
 	} else {
-		c.JSON(200, gin.H{
-			"text": result,
-		})
+		if isValidNumber(num) {
+			c.JSON(200, gin.H{
+				"text": result,
+			})
+		} else {
+			c.JSON(200, gin.H{
+				"text": "error",
+			})
+		}
 	}
 }
 

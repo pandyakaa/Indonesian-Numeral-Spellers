@@ -18,6 +18,23 @@ Buatlah dalam bahasa pemrograman **_Go_**, sebuah web service berupa **_REST API
 
 5. Batasan kasus uji : 2000000000 (dua milyar)
 
+## Algoritma dan Proses Pengerjaan
+Pada pembuatan program ini, proses pengerjaan dilakukan dengan dua tahap, yaitu tahap pembuatan _API/backend_ dengan menggunakan bahasa *Go* dan tahap pembuatan _User Interface/frontend_ dengan menggunakan *React.js*
+
+### API
+1. Membuat masing-masing fungsi untuk _endpoint_, yaitu fungsi *spell* dan fungsi *read* beserta fungsi-fungsi utilitasnya, dengan cara membaca setiap *tiga* angka dikarenakan bahasa Indonesia yang baku hanya mengeja maksimal tiga angka untuk menghasilkan angka yang valid
+2. Membuat fungsi untuk *validasi* masukan, untuk validasi angka hanya membutuhkan validasi apakah angka kurang dari sama dengan _dua milyar(2000000000)_, sedangkan untuk validasi teks harus dilakukan validasi _beruntun_ dikarenakan banyak kemungkinan masukan.
+
+### User Interface
+1. Membuat _desain_ dari user interface, dengan cara membuat terlebih dahulu template dalam bentuk *HTML* 
+2. Mengubah template dari yang sebelumnya dalam bentuk HTML, menjadi bentuk *JSX* dengan menggunakan [HTMLtoJSXconverter](https://magic.reactjs.net/htmltojsx.htm)
+3. Membuat sebuah *kelas form* sesuai aturan _React.js_ , kemudian membuat fungsi-fungsi yang akan dipanggil ketika mendapatkan masukan dari *form*
+4. Dengan menggunakan *axios*, akan dihubungkan API dengan User Interface, dengan User Interface akan mengirimkan nilai dalam bentuk *teks/angka*, dan mendapatkan hasil dalam bentuk *JSON*
+
+## Tech Stack yang Digunakan
+1. Go, dengan penggunaan library *gin* dan *cors*
+2. React.JS dengan menggunakan library *axios* 
+
 ## Cara Penggunaan
 1. Masuk ke direktori **backend**, kemudian ketik perintah :
 

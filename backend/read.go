@@ -86,3 +86,16 @@ func readUtils(str string) int {
 	}
 	return sum
 }
+
+func isValidText(str string) bool {
+	var s = strings.Split(str, " ")
+	var i = 0
+	for i < len(s) {
+		if s[0] == "satu" {
+			if s[1] == "ratus" || s[1] == "puluh" || s[1] == "ribu" || s[1] == "belas" {
+				return false
+			}
+		}
+	}
+	return true
+}

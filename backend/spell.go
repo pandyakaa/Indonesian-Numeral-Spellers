@@ -71,3 +71,10 @@ func spellUtils(in int) string {
 	}
 	return res
 }
+
+func isValidNumber(in int) bool {
+	if in > 2000000000 {
+		return false
+	}
+	return true
+}
