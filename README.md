@@ -108,3 +108,4 @@ Response :
 3. https://reactjs.org/docs/forms.html
 4. https://alligator.io/react/axios-react/
 5. https://dasarpemrogramangolang.novalagung.com/C-12-cors-preflight-request.html
+6. https://github.com/itsjamie/gin-cors
