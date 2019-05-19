@@ -48,3 +48,4 @@ Response :
 ## Referensi Pengerjaan
 1. https://medium.freecodecamp.org/portfolio-app-using-react-618814e35843
 2. https://hakaselogs.me/2018-04-20/building-a-web-app-with-go-gin-and-react/
+3. https://reactjs.org/docs/forms.html
