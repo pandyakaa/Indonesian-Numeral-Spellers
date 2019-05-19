@@ -56,10 +56,9 @@ func spell(c *gin.Context) {
 }
 
 func main() {
-	var config = cors.DefaultConfig()
-	config.AddAllowHeaders("*")
-	config.AllowAllOrigins = true
-	config.AllowMethods = []string{"POST", "GET"}
+	var corsconf = cors.DefaultConfig()
+	corsconf.AddAllowHeaders("*")
+	corsconf.AllowMethods = []string{"POST", "GET"}
 	
 	var router = gin.Default()
 	router.Use(cors.New(config))
