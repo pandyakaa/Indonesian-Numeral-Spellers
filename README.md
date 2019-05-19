@@ -107,3 +107,4 @@ Response :
 2. https://hakaselogs.me/2018-04-20/building-a-web-app-with-go-gin-and-react/
 3. https://reactjs.org/docs/forms.html
 4. https://alligator.io/react/axios-react/
+5. https://dasarpemrogramangolang.novalagung.com/C-12-cors-preflight-request.html
