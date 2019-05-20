@@ -5,19 +5,6 @@ Mengeja angka merupakan salah satu kegiatan dasar yang dilakukan setiap harinya.
 
 Dari permasalah di atas, maka diperlukanlah suatu sarana pembelajaran yang dapat membantu anak-anak balita di Indonesia untuk membaca dan mengeja angka. Dengan adanya solusi tersebut, diharapkan anak-anak dapat membaca dan mengeja angka lebih cepat sehingga mampu segera mempelajari hal-hal lebih besar lainnya dan tentunya meningkatkan tingkat pendidikan di Indonesia.
 
-## Algoritma dan Proses Pengerjaan
-Pada pembuatan program ini, proses pengerjaan dilakukan dengan dua tahap, yaitu tahap pembuatan _API/backend_ dengan menggunakan bahasa **Go** dan tahap pembuatan _User Interface/frontend_ dengan menggunakan **React.JS**
-
-### API
-1. Membuat masing-masing fungsi untuk _endpoint_, yaitu fungsi **spell** dan fungsi **read** beserta fungsi-fungsi utilitasnya, dengan cara membaca setiap **tiga** angka dikarenakan bahasa Indonesia yang baku hanya mengeja maksimal tiga angka untuk menghasilkan angka yang valid
-2. Membuat fungsi untuk **validasi** masukan, untuk validasi angka hanya membutuhkan validasi apakah angka kurang dari sama dengan _dua milyar(2000000000)_, sedangkan untuk validasi teks harus dilakukan validasi _beruntun_ dikarenakan banyak kemungkinan masukan.
-
-### User Interface
-1. Membuat _desain_ dari user interface, dengan cara membuat terlebih dahulu template dalam bentuk **HTML** 
-2. Mengubah template dari yang sebelumnya dalam bentuk HTML, menjadi bentuk **JSX** dengan menggunakan [HTMLtoJSXconverter](https://magic.reactjs.net/htmltojsx.htm)
-3. Membuat sebuah **kelas form** sesuai aturan _React.js_ , kemudian membuat fungsi-fungsi yang akan dipanggil ketika mendapatkan masukan dari **form**
-4. Dengan menggunakan **axios**, akan dihubungkan API dengan User Interface, dengan User Interface akan mengirimkan nilai dalam bentuk **teks/angka**, dan mendapatkan hasil dalam bentuk **JSON**
-
 ## Tech Stack yang Digunakan
 1. Go, dengan penggunaan library **gin** dan **cors**
 2. React.JS dengan menggunakan library **axios** 
