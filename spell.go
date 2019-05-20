@@ -35,7 +35,10 @@ func toStringUtils(in int, temps string) string {
 	} else if in < 20 {
 		temps = temps + toStringUnit(in%10) + " belas"
 	} else if in < 100 {
-		temps = temps + toStringUnit(in/10) + " puluh " + toStringUnit(in%10)
+		temps = temps + toStringUnit(in/10) + " puluh "
+		if toStringUnit(in%10) != "null" {
+			temps = temps + toStringUnit(in%10)
+		}
 	} else if in/100 == 1 {
 		if in == 100 {
 			temps = "seratus"
