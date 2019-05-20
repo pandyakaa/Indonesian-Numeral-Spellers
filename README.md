@@ -5,19 +5,6 @@ Mengeja angka merupakan salah satu kegiatan dasar yang dilakukan setiap harinya.
 
 Dari permasalah di atas, maka diperlukanlah suatu sarana pembelajaran yang dapat membantu anak-anak balita di Indonesia untuk membaca dan mengeja angka. Dengan adanya solusi tersebut, diharapkan anak-anak dapat membaca dan mengeja angka lebih cepat sehingga mampu segera mempelajari hal-hal lebih besar lainnya dan tentunya meningkatkan tingkat pendidikan di Indonesia.
 
-## Spesifikasi
-Buatlah dalam bahasa pemrograman **_Go_**, sebuah web service berupa **_REST API_**, yang dapat mengeja (dalam bahasa Indonesia) dari angka yang diberikan serta menuliskan angka yang tepat dari masukkan ejaan angka (dalam bahasa Indonesia juga), dengan ketentuan-ketentuan sebagai berikut :
-
-1. Terdapat 2 buah endpoint API yang perlu dibuat, yaitu '**GET** /spell' yang menerima parameter angka, serta '**POST** /read' yang menerima body/payload berupa text/ejaan. Jika input parameter atau body/payload tidak valid, maka berikan response keterangan error/gagal dengan format dibebaskan.
-
-2. Sebagai REST API, maka response harus berupa JSON. Struktur data response JSON dibebaskan.
-
-3. Program dibuat dengan mengikuti standar development resmi Go (lihat referensi #3), yaitu environment kode program berada pada ```$GOPATH/src/```, misalkan ```$GOPATH/src/github.com/Indonesian-Numeral-Spellers```.
-
-4. Arsitektur program dibebaskan (boleh mengikuti referensi-referensi _REST API with Go_ dari internet), namun harus tetap tersusun dengan rapi dan mengerti apa kegunaan setiap fungsi, file, serta package.
-
-5. Batasan kasus uji : 2000000000 (dua milyar)
-
 ## Algoritma dan Proses Pengerjaan
 Pada pembuatan program ini, proses pengerjaan dilakukan dengan dua tahap, yaitu tahap pembuatan _API/backend_ dengan menggunakan bahasa **Go** dan tahap pembuatan _User Interface/frontend_ dengan menggunakan **React.JS**
 
@@ -36,10 +23,9 @@ Pada pembuatan program ini, proses pengerjaan dilakukan dengan dua tahap, yaitu 
 2. React.JS dengan menggunakan library **axios** 
 
 ## Cara Penggunaan
-1. Masuk ke direktori **backend**, kemudian ketik perintah :
-
+1. Masuk ke $GOPATH/src, kemudian clone repository ini, dan jalankan :
 ```
-go run spell.go read.go main.go
+go get github.com/Indonesian-Numeral-Spellers
 ```
 
 2. Untuk menguji coba API, menggunakan perangkat lunak [POSTMAN](https://www.getpostman.com/) dengan melakukan request pada :
