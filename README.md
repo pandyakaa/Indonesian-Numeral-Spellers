@@ -36,10 +36,9 @@ Pada pembuatan program ini, proses pengerjaan dilakukan dengan dua tahap, yaitu 
 2. React.JS dengan menggunakan library **axios** 
 
 ## Cara Penggunaan
-1. Masuk ke direktori **backend**, kemudian ketik perintah :
-
+1. Masuk ke $GOPATH/src, kemudian clone repository ini, dan jalankan :
 ```
-go run spell.go read.go main.go
+go get github.com/Indonesian-Numeral-Spellers
 ```
 
 2. Untuk menguji coba API, menggunakan perangkat lunak [POSTMAN](https://www.getpostman.com/) dengan melakukan request pada :
