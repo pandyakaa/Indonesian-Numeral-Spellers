@@ -8,8 +8,8 @@ import (
 )
 
 func read(c *gin.Context) {
-	c.Header("Content-Type", "application/json")
-	var query = c.Query("text")
+	c.Header("Content-Type", "application/x-www-form-urlencoded")
+	var query = c.PostForm("text")
 	if isValidText(query) {
 		var answer = readUtils(query)
 		if answer <= 2000000000 {
@@ -29,7 +29,6 @@ func read(c *gin.Context) {
 }
 
 func spell(c *gin.Context) {
-	c.Header("Content-Type", "application/json")
 	var query = c.Query("number")
 	var num, err = strconv.Atoi(query)
 	var result = ""
@@ -66,5 +65,5 @@ func main() {
 	router.Use(cors.New(config))
 	router.GET("/spell", spell)
 	router.POST("/read", read)
-	router.Run()
+	router.Run(":47000")
 }
