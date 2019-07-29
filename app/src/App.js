@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import axios from 'axios';
+import qs from 'qs';
 
 class speller extends React.Component {
 
@@ -12,11 +13,16 @@ class speller extends React.Component {
     }
 
     readStr() {
-      axios.post('http://localhost:8080/read?text='+document.getElementById("readinput").value).then(res => document.getElementById("readoutput").innerHTML = res.data.number)
+      var url = 'https://api.pandyaka.com/speller/read';
+      const data = qs.stringify({
+        text: document.getElementById("readinput").value
+      })
+      console.log(document.getElementById("readinput").value);
+      axios.post(url,data).then(res => document.getElementById("readoutput").innerHTML = res.data.number)
     }
 
     spellNum() {
-      axios.get('http://localhost:8080/spell?number='+document.getElementById("spellinput").value).then(res => document.getElementById("spelloutput").innerHTML = res.data.text);
+      axios.get('https://api.pandyaka.com/speller/spell?number='+document.getElementById("spellinput").value).then(res => document.getElementById("spelloutput").innerHTML = res.data.text);
     }
 
     render() {
@@ -49,10 +55,6 @@ class speller extends React.Component {
 
           <div className="readoutput" id="readoutput"></div>
 
-        </div>
-
-        <div className="App-footer">
-          <h4>13517003</h4>
         </div>
       </div>
 
